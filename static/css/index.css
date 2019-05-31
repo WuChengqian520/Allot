@@ -1,0 +1,75 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.title-wrapper{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.headline{
+    display: inline-block;
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0 auto;
+}
+.main-wrapper{
+    width: 830px;
+    height: 100%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+.recode-box{
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+}
+.show-box{
+    float: left;
+    width: 500px;
+    border: 1px solid #eeeeee;
+}
+.title{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #5cb85c;
+}
+.title span{
+    color: white;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.input-wrapper{
+    padding: 20px;
+    border: 1px solid #eeeeee;
+}
+
+.recode-list{
+    width: 100%;
+    padding: 10px;
+}
+.recode-list .line{
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+.recode-list .line .name{
+    display: inline-block;
+    font-size: 20px;
+    float: left;
+}
+.recode-list .line .time{
+    display: inline-block;
+    float: right;
+}
+.delete{
+    margin-left: 10px;
+    display: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品管理</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</head>
+<body>
+    <div class="title-wrapper">
+        <div class="headline">
+            <p>工厂生产控制管理</p>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        {% csrf_token %}
+        <div class="recode-box">
+            <div class="title">
+                <span>录入新的产品系列名</span>
+            </div>
+            <div class="input-wrapper">
+                <div class="form-group">
+                    <label for="">新的产品系列前缀</label>
+                    <input type="text" name="name" class="form-control" maxlength="4" placeholder="产品系列名">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="submit">提交</button>
+                </div>
+            </div>
+        </div>
+        <div class="show-box">
+            <div class="title">
+                <span>已录入的产品系列名</span>
+            </div>
+            <div class="recode-list">
+                <div class="line">
+                    <span class="name">产品系列名称</span>
+                    <span class="time">录入时间</span>
+                </div>
+                {% for item in series %}
+                    <div class="line" name-id="{{ item.id }}">
+                        <span class="name">{{ item.series_name }}</span>
+                        <span class="time">{{ item.create_time }}</span>
+                        <span class="delete-wrapper">
+                            <button class="btn btn-danger btn-xs delete">×</button>
+                        </span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
