@@ -9,6 +9,6 @@ class AllowProject(models.Model):
 
 class BluetoothPassword(models.Model):
     sn = models.CharField("蓝牙SN", max_length=20)
-    password = models.CharField("蓝牙密码", max_length=20)
+    password = models.CharField("蓝牙密码", max_length=32)
     barcode = models.CharField("条码", max_length=32, null=True)
     create_time = models.DateTimeField("创建时间", auto_now_add=True)
